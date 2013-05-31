@@ -73,15 +73,10 @@ FACEBOOK = {
     'APP_ID': '138837436154588'
 }
 
-NPR_DFP = {
-    'STORY_ID': '171421875',
-    'TARGET': '\/news_politics;storyid=171421875'
-}
-
 """
 SERVICES
 """
-GOOGLE_ANALYTICS_ID = 'UA-5828686-4'
+GOOGLE_ANALYTICS_ID = 'UA-15143352-1'
 
 """
 Utilities
