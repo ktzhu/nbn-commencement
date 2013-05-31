@@ -20,7 +20,7 @@ env.deploy_to_servers = app_config.DEPLOY_TO_SERVERS
 env.deploy_crontab = app_config.DEPLOY_CRONTAB
 env.deploy_services = app_config.DEPLOY_SERVICES
 
-env.repo_url = 'git@github.com:nprapps/%(repository_name)s.git' % env
+env.repo_url = 'git@github.com:ktzhu/%(repository_name)s.git' % env
 env.alt_repo_url = None  # 'git@bitbucket.org:nprapps/%(repository_name)s.git' % env
 env.user = 'ubuntu'
 env.python = 'python2.7'
@@ -48,7 +48,8 @@ bucket.
 def production():
     env.settings = 'production'
     env.s3_buckets = app_config.PRODUCTION_S3_BUCKETS
-    env.hosts = app_config.PRODUCTION_SERVERS
+    # env.hosts = app_config.PRODUCTION_SERVERS
+    env.hosts = ['127.0.0.1']
 
 def staging():
     env.settings = 'staging'
