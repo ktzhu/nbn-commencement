@@ -14,7 +14,7 @@ import os
 NAMES
 """
 # Project name used for display
-PROJECT_NAME = 'nbn-commencement'
+PROJECT_NAME = 'Commencement 2013'
 
 # Project name used for paths on the filesystem and in urls
 # Use dashes, not underscores
