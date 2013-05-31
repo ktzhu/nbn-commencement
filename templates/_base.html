@@ -8,10 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="http://media.npr.org/favicon.ico" />
-
-    <!-- CHARTBEAT -->
-    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <link rel="shortcut icon" href="https://plus.google.com/_/favicon?domain=northbynorthwestern.com" />
 
     <!-- CSS -->
     {{ CSS.push('css/bootstrap.css') }}
@@ -20,14 +17,6 @@
     {% block extra_css %}{% endblock extra_css %}
     {{ CSS.render('css/app.min.css') }}
 
-    <!-- AD CODE -->
-    <script>
-        NPR = {};
-        NPR.PageInfo = {};
-        NPR.PageInfo.getUrlParameter = function (param) {
-            return false;
-        };
-    </script>
 
     <!-- JS -->
     {{ JS.push('js/app_config.js') }}
@@ -39,29 +28,14 @@
     {% block extra_head_js %}{% endblock extra_head_js %}
     {{ JS.render('js/app-header.min.js') }}
 
-    <script>
-        AddNamespace('NPR.serverVars');
-        jQuery.extend(NPR.serverVars, {
-            "storyId": "{{ NPR_DFP.STORY_ID }}",
-            "serverType": "prod",
-            "DFPtarget": "{{ NPR_DFP.TARGET }}",
-            "DFPuserver": "u.npr.org",
-            "DFPserver": "ad.doubleclick.net",
-            "DFPnetwork": "n6735",
-            "DFPsite": "NPR",
-            "DFPmobile": "NPR.MOBILE",
-            "facebookAppId": "{{ FACEBOOK.APP_ID }}"
-        });
-    </script>
-
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@nprapps">
+    <meta name="twitter:site" content="@northbynorthwestern">
     <meta property="og:title" content="{{ FACEBOOK.TITLE }}" />
     <meta property="og:url" content="{{ FACEBOOK.URL }}" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="{{ FACEBOOK.DESCRIPTION }}" />
     <meta property="og:image" content="{{ FACEBOOK.IMAGE_URL }}" />
-    <meta property="og:site_name" content="NPR.org" />
+    <meta property="og:site_name" content="northbynorthwestern.com" />
     <meta property="fb:app_id" content="{{ FACEBOOK.APP_ID }}" />
 
     {% block extra_head %}
@@ -72,20 +46,18 @@
 
     <nav>
         <ul class="site-links">
-            <li class="npr"><a href="http://npr.org"><img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR" /></a></li>
-            <li class="news"><a href="http://www.npr.org/sections/news/">News</a></li>
-            <li class="arts"><a href="http://www.npr.org/sections/arts/">Arts &amp; Life</a></li>
-            <li class="music"><a href="http://www.npr.org/music/">Music</a></li>
-            <li class="listen"><a href="http://www.npr.org/listen/">Listen</a></li>
+            <li class="nbn"><a href="http://northbynorthwestern.com"><img src="http://nbn-housing.s3.amazonaws.com/static/img/nbn-logo.png" alt="NBN" /></a></li>
+            <li class="news"><a href="http://www.northbynorthwestern.com/section/news/">News</a></li>
+            <li class="features"><a href="http://www.northbynorthwestern.com/section/features/">Features</a></li>
+            <li class="arts"><a href="http://www.northbynorthwestern.com/section/life-and-style/">Life &amp; Style</a></li>
+            <li class="entertain"><a href="http://www.northbynorthwestern.com/section/entertainment/">Entertainment</a></li>
+            <li class="sports"><a href="http://www.northbynorthwestern.com/section/sports/">Sports</a></li>
+            <li class="politics"><a href="http://www.northbynorthwestern.com/section/politics/">Politics</a></li>
+            <li class="mag"><a href="http://www.northbynorthwestern.com/library">Magazine</a></li>
         </ul>
         <ul class="social-links">
-            <li class="twitter"><a rel="external" href="http://twitter.com/share?text={{ TWITTER.TEXT|urlencode }}&amp;url={{ TWITTER.URL|urlencode }}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Navbar', '{{ PROJECT_NAME }}']);">Share This Page On Twitter</a></li>
-            <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id={{ FACEBOOK.APP_ID }}&amp;link={{ FACEBOOK.URL|urlencode }}&amp;name={{ FACEBOOK.TITLE|urlencode }}&amp;picture={{ FACEBOOK.IMAGE_URL|urlencode }}&amp;redirect_uri={{ FACEBOOK.URL|urlencode }}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Navbar', '{{ PROJECT_NAME }}']);">Like This Page On Facebook</a></li>
-        </ul>
-        <ul class="site-links-2">
-            <li class="stations"><a href="http://www.npr.org/templates/stations/stations/">Stations</a></li>
-            <li class="donate"><a href="http://www.npr.org/stations/donate/index.php">Donate</a></li>
-            <li class="shop"><a href="http://shop.npr.org">Shop</a></li>
+            <li class="twitter"><a rel="external" href="http://twitter.com/share?text={{ TWITTER.TEXT|urlencode }}&amp;url={{ TWITTER.URL|urlencode }}" alt="Share on Twitter" target="_blank">Share This Page On Twitter</a></li>
+            <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id={{ FACEBOOK.APP_ID }}&amp;link={{ FACEBOOK.URL|urlencode }}&amp;name={{ FACEBOOK.TITLE|urlencode }}&amp;picture={{ FACEBOOK.IMAGE_URL|urlencode }}&amp;redirect_uri={{ FACEBOOK.URL|urlencode }}" alt="Share on Facebook" target="_blank">Like This Page On Facebook</a></li>
         </ul>
     </nav>
 
@@ -101,22 +73,6 @@
                     App content goes here.
                     {% endblock content %}
                 </div>
-                <div class="span4">
-                    {# 300x250 ad #}
-                    <div class="adwrapper">
-                        <div class="sponsor300">
-                            <script type="text/javascript">
-                            <!--
-                            try {
-                                DFP.renderLocation('desktop');
-                            } catch(e) {
-                                NPR.messaging.warning('Problem fetching/rendering desktop ad server code.', 'DFP.renderLocation', NPR.messaging.constants.SPONSORSHIP_ERROR);
-                            }
-                            // -->
-                            </script>
-                        </div>
-                    </div>
-                </div>
             </div>
             {% block wide_content %}
             {% endblock wide_content %}
@@ -126,38 +82,13 @@
     <footer>
         <div class="primary">
             <ul>
-                <li><a href="http://www.npr.org" data-action="Click Logo"><img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR Logo"></a></li>
-                <li class="news"><a href="http://www.npr.org/sections/news/">News</a></li>
-                <li class="artslife"><a href="http://www.npr.org/sections/arts/">Arts &amp; Life</a></li>
-                <li class="music"><a href="http://www.npr.org/music/">Music</a></li>
-                <li class="programs"><a href="http://www.npr.org/programs/">Programs</a></li>
-                <li class="listen"><a href="http://www.npr.org/listen/">Listen</a></li>
-                <li class="about"><a href="http://www.npr.org/about/">About</a></li>
+                <li><a href="http://www.northbynorthwestern.com"><img src="https://plus.google.com/_/favicon?domain=northbynorthwestern.com" alt="NBN Logo"></a></li>
             </ul>
         </div>
         <div class="secondary">
-            <p>&copy;2013 NPR</p>
-            <ul>
-                <li id="footerContact"><a href="http://help.npr.org/npr/includes/customer/npr/custforms/contactus.aspx">Contact</a></li>
-                <li><a href="http://www.npr.org/about/termsofuse.html">Terms of Use</a></li>
-                <li><a href="http://www.npr.org/about/privacypolicy.html">Privacy</a></li>
-                <li><a href="http://thin.npr.org/">Text-Only</a></li>
-            </ul>
+            <p>&copy;2013 NBN</p>
         </div>
     </footer>
-
-    {# Adhesion ad #}
-    <div id="adhesion">
-        <script type="text/javascript">
-        <!--
-        try {
-            DFP.renderLocation('mobile');
-        } catch (e) {
-            NPR.messaging.warning('Problem fetching/rendering mobile ad server code.', 'DFP.renderLocation', NPR.messaging.constants.SPONSORSHIP_ERROR);
-        }
-        // -->
-        </script>
-    </div>
 
     {% endblock outer_content %}
 
@@ -181,33 +112,6 @@
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-
-    <!-- CHARTBEAT -->
-    <script type="text/javascript">
-        var _sf_async_config={};
-        /** CONFIGURATION START **/
-        _sf_async_config.uid = 18888;
-        _sf_async_config.domain = "npr.org";
-        /** CONFIGURATION END **/
-        (function(){
-            function loadChartbeat() {
-                window._sf_endpt=(new Date()).getTime();
-                var e = document.createElement("script");
-                e.setAttribute("language", "javascript");
-                e.setAttribute("type", "text/javascript");
-                e.setAttribute("src",
-                    (("https:" == document.location.protocol) ?
-                     "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
-                     "http://static.chartbeat.com/") +
-                    "js/chartbeat.js");
-                document.body.appendChild(e);
-            }
-            var oldonload = window.onload;
-            window.onload = (typeof window.onload != "function") ?
-                loadChartbeat : function() { oldonload(); loadChartbeat(); };
         })();
     </script>
 </body>
