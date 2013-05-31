@@ -21,14 +21,16 @@
 </div>
 
 <h2>Story List</h2>
+<div class="story-well">
     {% for story in COPY.stories %}
-    <div class="span3">
+    <div class="tile span3">
       <p class="title">{{ story.title }}</p>
       <p class="byline">by: {{ story.author }}</p>
       <img src="{{ story.image_url }}"</img>
       <p class="content">{{ story.content }}</p>
     </div>
     {% endfor %}
+</div>
 
 {% endblock %}
 
