@@ -11,7 +11,7 @@
     <div id="{{ story.slug }}-tile" class="tile span3">
       <p class="title"><a href="/#{{ story.slug }}" data-toggle="modal">{{ story.title }}</a></p>
       <p class="byline">by: {{ story.author }}</p>
-      <img src="{{ story.image_url }}">
+      <a href="/#{{ story.slug }}" data-toggle="modal"><img src="{{ story.image_url }}"></a>
       <div id={{ story.slug }} class="popup modal hide fade" tabindex="-1" role="dialog">
         <div class="modal-wrap">
           <div class="modal-header">
