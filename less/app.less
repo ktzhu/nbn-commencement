@@ -8,8 +8,8 @@ h1 { font: normal 32px/1.125 Georgia, serif; margin: 0 0 22px 0; }
 h2 { font-weight: normal; line-height: 1.2; color: #333; margin-bottom: 22px; font-size: 22px; }
 h3, h4, h5, h6 { font-weight: normal; line-height: 1.2; color: #999; margin-bottom: 22px; }
 p { margin-bottom: 1.3em; }
-a, a:link, a:visited { color: #4774cc; text-decoration: none; }
-a:hover, a:active { color: #bccae5; text-decoration: none; }
+a, a:link, a:visited, a:active { color: #501F84; font-weight: bold; }
+a:hover { text-decoration: underline; }
 .btn.btn-blue, a.btn.btn-blue {
 	background: none;
 	background-color: #7598c9;
@@ -67,8 +67,7 @@ nav {
             &:hover { opacity: .7; }
         }
         li { margin-left: 0; }
-        .facebook a { background-position: 0px -144px; }
-        .twitter a { background-position: 0px -96px; border-right:2px solid white;}
+        .twitter a { background-position: 0px -96px;}
     }
 }
 
@@ -99,7 +98,49 @@ section.the-goods { margin-top: 44px; }
 }
 h1 + #story-meta { margin-top: -11px; }
 
-.story-well>:first-child { margin-left: 0px; }
+.story-well>:nth-child(4n+1) { margin-left: 0px; }
+
+.story-well {
+  .title {
+    font-size: 16px;
+    font-family: Georgia, serif;
+    color: #000;
+    margin-bottom: 0;
+  }
+
+  .byline {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    color: #555;
+  }
+
+}
+
+span.back {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  color: #555;
+  &:hover { cursor: pointer; }
+}
+
+.modal.fade.in { top: 5%; }
+
+.popup {
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  margin-bottom: 5%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+
+  .modal-wrap { height: 100%; overflow: hidden; }
+
+  .modal-body { height: 100%; max-height: none; }
+}
 
 // Footer
 footer {
@@ -109,8 +150,8 @@ footer {
 
 	ul { list-style: none; margin: 0; padding: 0; }
 	li, p { float: left; }
-	a, a:link, a:visited { color: #6d8ac4; font-weight: bold; }
-	a:hover, a:active { color: #bccae5; }
+	a, a:link, a:visited, a:active { color: #501F84; font-weight: bold; }
+	a:hover { text-decoration: underline; }
 
 	.primary { 
 		float: left; 
