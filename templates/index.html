@@ -1,5 +1,16 @@
 {% extends '_base.html' %}
 
+{% block header_content %}
+<header>
+<div class="container">
+    <div class="row">
+      <div id="banner" class="span12">
+      </div>
+    </div>
+</div>
+</header>
+{% endblock header_content %}
+
 {% block content %}
 <h1>{{ PROJECT_NAME }}</h1>
 <div id="story-meta">
@@ -32,13 +43,4 @@
     {% endfor %}
 </div>
 
-{% endblock %}
-
-
-{% block wide_content %}
-<div class="row">
-    <div class="span12">
-        <h2>{{ COPY.content.footer }}</h2>
-    </div>
-</div>
 {% endblock %}

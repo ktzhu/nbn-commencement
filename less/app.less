@@ -73,9 +73,15 @@ nav {
 
 
 // Header
+#banner {
+  height: 400px;
+}
+
 header {
-	background-color: #ebebeb;
-	padding: 50px 30px 30px 30px;
+        background: url(https://photos-4.dropbox.com/t/0/AABJCMOW9bW5BfuJSgusdIfWC53KG2zmrLPGtn5besuLWw/12/170854854/jpeg/32x32/3/1370394000/0/2/IMG_2585%20copy.jpg/jSdhljGF-9Ac3354EBNkGltOuRj-_Qlhx8NPKA4Am98%2CnjYRe0yOS4x2_6A3ppkKAGU_yvlO1dgwlgqnXVM8wjk%2C7f9OnPB-Mm2VpOe8uHFv6X-okWEwuTaLQYJTsijII5o?size=1280x960);
+	// padding: 50px 30px 30px 30px;
+        background-size: cover;
+        background-position: center;
 	margin: 0;
 	border-bottom: 2px solid #fff;
 
@@ -113,6 +119,7 @@ h1 + #story-meta { margin-top: -11px; }
     font-family: Arial, sans-serif;
     font-style: italic;
     color: #555;
+    margin-bottom: 0px;
   }
 
 }
@@ -124,6 +131,11 @@ span.back {
   color: #555;
   &:hover { cursor: pointer; }
 }
+
+.tile {
+  margin-bottom: 25px;
+}
+
 
 .modal.fade.in { top: 5%; }
 
@@ -194,6 +206,7 @@ footer {
 @media (max-width: 767px) {
 	nav, header, footer { margin-left: -20px; margin-right: -20px; }
 	nav .site-links { margin-left: 20px; }
+        .popup { width: 90%; left: 5%; }
 	footer { 
 		.primary { display: none; }
 		.secondary p { float: left; font-size: 10px; color: #bccae5; }
@@ -210,7 +223,6 @@ footer {
 		li { display: none; }
 		.nbn { display: block; }
 	}
-        .popup { width: 90%; left: 5%; }
 	header {
 		padding: 33px 20px;
 		h1 { font-size: 36px; }
