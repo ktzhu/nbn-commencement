@@ -14,21 +14,21 @@
 {% block content %}
 <h1>{{ PROJECT_NAME }}</h1>
 <div id="story-meta">
-    <p class="byline">by <span>{{ COPY.attribution.byline }}</span></p>
+    <p class="byline">By <span>{{ COPY.attribution.byline }}</span></p>
 </div>
 
 <div class="story-well">
     {% for story in COPY.stories %}
     <div id="{{ story.slug }}-tile" class="tile span3">
       <p class="title"><a href="/#{{ story.slug }}" data-toggle="modal">{{ story.title }}</a></p>
-      <p class="byline">by: {{ story.author }}</p>
+      <p class="byline">By {{ story.author }}</p>
       <a href="/#{{ story.slug }}" data-toggle="modal"><img src="{{ story.image_url }}"></a>
       <div id={{ story.slug }} class="popup modal hide fade" tabindex="-1" role="dialog">
         <div class="modal-wrap">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
             <p class="title">{{ story.title }}</p>
-            <p class="byline">by: {{ story.author }}</p>
+            <p class="byline">By {{ story.author }}</p>
           </div>
           <div class="modal-body content">
             {{ story.content }}
