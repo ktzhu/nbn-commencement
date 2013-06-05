@@ -18,7 +18,7 @@ PROJECT_NAME = 'Goodbye, from the Class of 2013'
 
 # Project name used for paths on the filesystem and in urls
 # Use dashes, not underscores
-PROJECT_SLUG = 'nbn-commencement'
+PROJECT_SLUG = 'commencement2013'
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'nbn-commencement'
@@ -26,10 +26,10 @@ REPOSITORY_NAME = 'nbn-commencement'
 """
 DEPLOYMENT
 """
-PRODUCTION_S3_BUCKETS = ['play.kzhu.io']
+PRODUCTION_S3_BUCKETS = ['apps.northbynorthwestern.com']
 PRODUCTION_SERVERS = ['cron.nprapps.org']
 
-STAGING_S3_BUCKETS = ['play.kzhu.io']
+STAGING_S3_BUCKETS = ['apps.northbynorthwestern.com']
 STAGING_SERVERS = ['50.112.92.131']
 
 # Should code be deployed to the web/cron servers?
@@ -51,7 +51,8 @@ DEBUG = True
 """
 COPY EDITING
 """
-COPY_GOOGLE_DOC_KEY = '0AiINjEdvBDPadDBqT0h6QWJDamZ6OUtXNE5GYVlhRkE'
+COPY_GOOGLE_DOC_KEY = '0AiINjEdvBDPadG5JQ0NJdWdDX3EwRFdvRi1ERUR4Rnc'
+# COPY_GOOGLE_DOC_KEY = '0AiINjEdvBDPadDBqT0h6QWJDamZ6OUtXNE5GYVlhRkE'
 
 """
 SHARING
