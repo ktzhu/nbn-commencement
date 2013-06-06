@@ -19,6 +19,7 @@ PROJECT_NAME = 'Goodbye from the Class of 2013'
 # Project name used for paths on the filesystem and in urls
 # Use dashes, not underscores
 PROJECT_SLUG = 'commencement2013'
+PROJECT_SLUG_ROOT = 'commencement'
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'nbn-commencement'
@@ -58,7 +59,7 @@ COPY_GOOGLE_DOC_KEY = '0AiINjEdvBDPadG5JQ0NJdWdDX3EwRFdvRi1ERUR4Rnc'
 SHARING
 """
 PROJECT_DESCRIPTION = "Northwestern's Class of 2013 looks back on their time in Evanston."
-SHARE_URL = 'http://%s/%s/' % (PRODUCTION_S3_BUCKETS[0], PROJECT_SLUG)
+SHARE_URL = 'http://%s/%s/2013' % (PRODUCTION_S3_BUCKETS[0], PROJECT_SLUG_ROOT)
 
 
 TWITTER = {
